@@ -1,2 +1,2 @@
 # TraceQuest
-TraceQuest is basically showcase details of spas and sallons by city in this project i worked in team ,there are three members in our team, 
+TraceQuest is a spa and saloon recommendation website which allows you to find best spa location near me and provide information about spa and salon , I built this project with cooperative team

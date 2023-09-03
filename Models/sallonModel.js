@@ -1,9 +1,9 @@
-// Author : Vishal & Rinal & sohil
-// Purpose : Defining spa model/schema.
+// Author : Vishal
+// Purpose : Defining sallon model/schema.
 import mongoose from "mongoose";
 import  Services  from "../Models/servicesModel.js";
 
-const spaSchema = new mongoose.Schema({
+const sallonSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -30,11 +30,11 @@ const spaSchema = new mongoose.Schema({
   },
   // imgUrl: {
   //   type: String,
-  //   required: false,
+  //   required: true,
   // },
   // mulImgUrl: {
   //   type: [String],
-  //   required: false,
+  //   required: true,
   // },
   City: {
     type: String,
@@ -48,7 +48,7 @@ const spaSchema = new mongoose.Schema({
   //   type: [String],
   //   required: true,
   // },
-  spaLocation: {
+  sallonLocation: {
     type: {
       type: String,
       enum: ["Point"],
@@ -117,9 +117,9 @@ const spaSchema = new mongoose.Schema({
 });
 
 //creating sphare
-spaSchema.index({ spaLocation: "2dsphere" });
+sallonSchema.index({ sallonModel : "2dsphere" });
 //Creating Model of schema.
 
-const spaModel = mongoose.model("spaModel", spaSchema);
+const sallonModel = mongoose.model("sallonModel", sallonSchema);
 
-export default spaModel;
+export default sallonModel;

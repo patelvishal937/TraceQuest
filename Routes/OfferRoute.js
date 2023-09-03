@@ -6,6 +6,8 @@ import express from "express";
 
 import { getoffer, postOffer, deleteOffer } from "../Controllers/offerController.js";
 import {upload} from "../Middleware/imageUpload.js";
+import authMiddleWare from "../Middleware/authMiddleware.js";
+
 
 const OfferRoute = express.Router();
 
@@ -13,7 +15,7 @@ const OfferRoute = express.Router();
 
 OfferRoute
   .get("/", getoffer)
-  .post("/",upload.single('imageUrl'),postOffer)
-  .delete("/:id", deleteOffer);
+  .post("/",authMiddleWare,upload.single('imageUrl'),postOffer)
+  .delete("/:id",authMiddleWare,deleteOffer);
 
 export default OfferRoute;

@@ -25,14 +25,14 @@ export const getoffer = async (req, res) => {
 export const postOffer = async (req, res) => {
     try {
       const { Name, Slug, Select_Spa, Priority } = await req.body;
-      const fetchUrl = await req.file.location;      
+      // const fetchUrl = await req.file.location;      
   
       const newOffer =   new OfferModel({
         Name,
         Slug,
         Select_Spa,
         Priority,
-        imageUrl: fetchUrl,
+        // imageUrl: fetchUrl,
       });
   
       await newOffer.save();

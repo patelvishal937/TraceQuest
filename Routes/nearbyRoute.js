@@ -3,10 +3,10 @@
 
 import express from "express";
 import {nearbySpa}  from "../Controllers/nearbyController.js";
-
+import authMiddleWare from "../Middleware/authMiddleware.js";
 const nearbyRoute = express.Router();
 
 nearbyRoute
-.post("/nearbylocation",nearbySpa);
+.post("/nearbyspalocation",authMiddleWare,nearbySpa);
 
 export default nearbyRoute;

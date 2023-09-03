@@ -29,10 +29,6 @@ const offerScheme = new mongoose.Schema({
       message: "Priority already assigned to another therapy.",
     },
   },
-  imageUrl: {
-    type: String,
-    required: true,
-  },
 });
 
 //Creating Model of schema.

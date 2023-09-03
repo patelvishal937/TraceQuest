@@ -26,13 +26,13 @@ import TherapyModel from "../Models/ThearpyModel.js";
 export const postTheparies = async (req, res) => {
   try {
     const { Name, Slug, Priority } = await req.body;
-    const fetchUrl = await req.file.location;      
+    // const fetchUrl = await req.file.location;      
 
     const newTherapy = new TherapyModel({
       Name,
       Slug,
       Priority,
-      imageUrl: fetchUrl,
+      // imageUrl: fetchUrl,
     });
 
     await newTherapy.save();

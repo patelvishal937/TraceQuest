@@ -7,7 +7,6 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from 'cors'
 import dotenv from 'dotenv';
-
 //Api Routes file
 import apiv1 from "./api.js";
 

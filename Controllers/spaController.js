@@ -15,14 +15,14 @@ export const getallSpa = async (req, res) => {
 //Logic function for creating(posting) all Spas.
 export const createSpa = async (req, res) => {
   try {
-    const data = req.body;
+    const data = await req.body;
+    // const spaLocation2 = await req.body.spaLocation;
 
-    const fetchUrl = await req.file.location;
 
     const newSpa = new spaModel({
       ...data,
-      imageUrl: fetchUrl,
     });
+
     await newSpa.save();
     console.log("new spa is : ", newSpa);
     res.status(201).send("Spa is created");

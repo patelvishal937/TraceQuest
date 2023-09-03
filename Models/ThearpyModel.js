@@ -22,10 +22,10 @@ const TherapyScheme = new mongoose.Schema({
           },
           
     },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
+    // imageUrl: {
+    //   type: String,
+    //   required: true,
+    // },
 }   
 );
 
